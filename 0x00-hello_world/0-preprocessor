@@ -1,2 +1,2 @@
 #!/bin/bash
-make c
+gcc ${CFILE} -o c
