@@ -17,7 +17,7 @@ for (s = a + 1; s <= 9; s++)
 putchar (c + '0');
 putchar (a + '0');
 putchar (s + '0');
-if (c != 8 || a != 9 || s != 9)
+if (c != 7 || a != 8 || s != 9)
 {
 putchar (',');
 putchar (' ');
