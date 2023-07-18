@@ -7,11 +7,14 @@
  */
 int main(void)
 {
-	char word[] = "_putchar";
-	int num = sizeof(word) - 1;
-
-	for (int i = 0; i < num; i++)
-		putchar(word[i]);
+	putchar('_');
+	putchar('p');
+	putchar('u');
+	putchar('t');
+	putchar('c');
+	putchar('h');
+	putchar('a');
+	putchar('r');
 	putchar('\n');
 	return (0);
 }
