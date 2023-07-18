@@ -5,7 +5,7 @@
  *
  * Return: Always void
  */
-void print_alphabet(void);
+void print_alphabet();
 /**
  * main - check the code for Holberton School students.
  *
@@ -16,7 +16,7 @@ int main(void)
 	print_alphabet();
 	return (0);
 }
-void print_alphabet(void)
+void print_alphabet()
 {
 	char c;
 
