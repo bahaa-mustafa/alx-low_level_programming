@@ -1,11 +1,10 @@
-#include<stdio.h>
 #ifndef MAIN_H
 #define MAIN_H
+#include<stdio.h>
 
 /* function prototypes */
 int _putchar(char c);
-int my_function1(int x);
-void my_function2(void);
+void print_alphabet(void);
 
 #endif /* MAIN_H */
 
