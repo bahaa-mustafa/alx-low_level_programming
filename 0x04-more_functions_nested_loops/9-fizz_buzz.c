@@ -2,24 +2,26 @@
 /**
  * main - print some numbers from 0 : 100,
  * and some words like Fizz Buzz ....
+ *
+ * Return: always 0
  */
-void main(void)
+int main(void)
 {
 	int i;
 
 	for (i = 1; i <= 100; i++)
 	{
 		if (i % 15 == 0)
-			puts("FizzBuzz");
+			printf("FizzBuzz");
 		else if (i % 3 == 0)
-			puts("Fizz");
+			printf("Fizz");
 		else if (i % 5 == 0)
-			puts("Buzz");
+			printf("Buzz");
 		else
-			puts("%i", i);
+			printf("%i", i);
 		if (i < 100)
-			puts(" ");
+			printf(" ");
 	}
-	puts("\n");
-	return ();
+	printf("\n");
+	return (0);
 }
