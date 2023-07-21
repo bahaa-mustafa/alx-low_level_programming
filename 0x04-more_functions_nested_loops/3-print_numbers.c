@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_numbers - print numbers from 0 : 9
- * @s: number of increament
+ *
  *
  */
 void print_numbers(void)
