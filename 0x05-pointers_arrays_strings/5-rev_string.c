@@ -1,4 +1,5 @@
 #include "main.h"
+#include<sring.h>
 
 /**
  * rev_string - reverses a string.
