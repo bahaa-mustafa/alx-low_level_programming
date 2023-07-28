@@ -13,8 +13,6 @@ char *cap_string(char *c)
 
 	while (c[++i])
 	{
-		if (i == 0)
-			c[i] = c[i] - 'a' + 'A';
 		while (!(c[i] >= 'a' && c[i] <= 'z'))
 			i++;
 		if (c[i - 1] == ' '
@@ -30,7 +28,7 @@ char *cap_string(char *c)
 				|| c[i - 1] == ')'
 				|| c[i - 1] == '{'
 				|| c[i - 1] == '}')
-			c[i] = c[i] - 'a' + 'A';
+			c[i] -= 32;
 	}
 	return (c);
 }
