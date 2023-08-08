@@ -31,6 +31,7 @@ int helper(char *s1, char *s2)
 		s1++;
 		return (helper(s1, s2));
 	}
+	return (0);
 
 }
 
