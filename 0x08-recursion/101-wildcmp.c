@@ -11,6 +11,8 @@ int helper(char *s1, char *s2)
 {
 	if (*s1 == '\0' && *s2 == '\0')
 		return (1);
+	if (*s1 == '\0' && *s2 != '\0')
+		return (0);
 
 	if (*s2 == '*')
 	{
@@ -24,7 +26,10 @@ int helper(char *s1, char *s2)
 		return (helper(s1, s2));
 	}
 	else
-		return (0);
+	{
+		s1++;
+		return (helper(s1, s2));
+	}
 }
 
 /**
