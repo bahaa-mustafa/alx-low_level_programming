@@ -6,31 +6,18 @@
  */
 int main(void)
 {
-int c, a, d, f;
+int c, a;
 
 for (c = 0; c <= 9; c++)
 {
-	for (d = 0; d <= 9; d++)
+	for (a = c + 1; a <= 9; a++)
 	{
-		for (f = 0; f <= 9; f++)
+		putchar (c + '0');
+		putchar (a + '0');
+		if (c != 8 || a != 9)
 		{
-			for (a = 0; a <= 9; a++)
-			{
-				if (d == 0 && a == 0)
-				{
-					a++;
-				}
-				putchar (c + '0');
-				putchar (d + '0');
-				putchar (' ');
-				putchar (f + '0');
-				putchar (a + '0');
-				if (c != 8 || d != 9)
-				{
-					putchar (',');
-					putchar (' ');
-				}
-			}
+			putchar (',');
+			putchar (' ');
 		}
 	}
 }
