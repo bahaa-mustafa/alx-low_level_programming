@@ -16,10 +16,6 @@ for (c = 0; c <= 9; c++)
 		{
 			for (a = 0; a <= 9; a++)
 			{
-				if (d == 0 && a == 0)
-				{
-					a++;
-				}
 				putchar (c + '0');
 				putchar (d + '0');
 				putchar (' ');
