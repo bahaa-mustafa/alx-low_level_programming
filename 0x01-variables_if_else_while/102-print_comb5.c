@@ -12,13 +12,17 @@ for (c = 0; c <= 9; c++)
 {
 	for (d = 0; d <= 9; d++)
 	{
-		for (f = 0; f <= 9; f++)
+		for (f = c; f <= 9; f++)
 		{
-			for (a = 0; a <= 9; a++)
+			for (a = c; a <= 9; a++)
 			{
 				if (f == 0 && a == 0)
 				{
 					a++;
+				}
+				if (a < d)
+				{
+					a = d + 1;
 				}
 				putchar (c + '0');
 				putchar (d + '0');
