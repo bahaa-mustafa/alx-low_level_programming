@@ -14,7 +14,7 @@ for (c = 0; c <= 9; c++)
 	{
 		for (f = 0; f <= 9; f++)
 		{
-			for (a = 0; a <= 9; a++)
+			for (a = f + 1; a <= 9; a++)
 			{
 				putchar (c + '0');
 				putchar (d + '0');
