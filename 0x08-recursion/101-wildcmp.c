@@ -44,6 +44,6 @@ int helper(char *s1, char *s2)
 int wildcmp(char *s1, char *s2)
 {
 	if (*s1 == '\0' && *s2 == '\0')
-		return (0);
+		return (1);
 	return (helper(s1, s2));
 }
