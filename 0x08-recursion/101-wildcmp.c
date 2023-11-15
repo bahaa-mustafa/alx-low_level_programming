@@ -17,7 +17,7 @@ int helper(char *s1, char *s2, int f, int n)
 	if (s1[f] == '\0' && s2[n] == '*')
 		return (helper(s1, s2, f, n + 1));
 	if (s2[f] == '*')
-		return (helper(s1, s2, f, n + 1 || s1, s2, f + 1, n));
+		return (helper(s1, s2, f, n + 1) || helper(s1, s2, f + 1, n));
 
 	return (0);
 }
