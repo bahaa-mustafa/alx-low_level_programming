@@ -1,5 +1,16 @@
 #include "main.h"
-
+/**
+ * checker - check is s2 - 1 is a * or not
+ * @s2: the string
+ *
+ * Return: 0 if not an recursion if is true
+ */
+int checker(char *s2)
+{
+	if (*s2 == '*')
+		return (helper(s1 + 1, s2));
+	return (0);
+}
 /**
  * helper - help to detect similarity in two string
  * @s1: fiert string
@@ -20,7 +31,7 @@ int helper(char *s1, char *s2)
 	else if (*s1 == *s2)
 		return (helper(s1 + 1, s2 + 1));
 	else if (*s2 != *s1)
-		return (helper(s1 + 1, s2));
+		return (checker(s2 - 1));
 	return (0);
 
 }
