@@ -23,11 +23,11 @@ int helper(char *s1, char *s2)
 	{
 		return (helper(s1+1, s2+1));
 	}
-	if (*s2 != '*')
+	if (*s2 != *s1)
 	{
 		return (helper(s1+1, s2));
 	}
-	return (1);
+	return (0);
 
 }
 
