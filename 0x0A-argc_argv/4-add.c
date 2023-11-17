@@ -12,14 +12,14 @@
 int main(int argc, char *argv[])
 {
 	int i, add = 0, n;
-	char *refrence;
+	char *ref;
 
 	if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			n = strtol(argv[i], &refrence, 10);
-			if (*refrence)
+			n = strtol(argv[i], &ref, 10);
+			if (*ref)
 			{
 				printf("Error\n");
 				return (1);
