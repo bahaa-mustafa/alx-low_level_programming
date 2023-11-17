@@ -7,7 +7,8 @@
  * @argc: number of things in the programe
  * @argv: it is an argument vector in the programe
  */
-void main(int argc, char *argv[])
+int main(int argc __attribute__((unused)), char *argv[])
 {
 	printf("%s\n", argv[0]);
+	return (0);
 }
