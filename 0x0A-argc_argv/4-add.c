@@ -1,35 +1,38 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
 
 /**
- * main - print number of things in programe
- * @argc: argement count in programe
- * @argv: argement vector in a programe
+ * main - adds positive numbers.
+ * @argc: argument count
+ * @argv: argument vector
  *
- * Return: always 0 in success and 1 in not
+ * Return: 0
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int i, add = 0, n;
-	char *ref;
+	int i, n, add = 0;
+	char *flags;
 
-	if (argc > 1)
+	if (argc < 2)
 	{
-		for (i = 1; i < argc; i++)
-		{
-			n = strtol(argv[i], &ref, 10);
-			if (*ref)
-			{
-				printf("Error\n");
-				return (1);
-			}
-			add += atoi(argv[i]);
-		}
-		printf("%d\n", add);
+		printf("0\n");
 		return (0);
 	}
-	else
-		printf("%d\n", add);
+
+	for (i = 1; argv[i]; i++)
+	{
+		n = strtol(argv[i], &flags, 10);
+		if (*flags)
+		{
+			printf("Error\n");
+			return (1);
+		}
+		else
+		{
+			add += n;
+		}
+	}
+	printf("%d\n", add);
+
 	return (0);
 }
