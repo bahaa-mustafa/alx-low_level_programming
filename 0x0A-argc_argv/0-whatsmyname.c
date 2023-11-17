@@ -6,6 +6,8 @@
  * main - print name of programe
  * @argc: number of things in the programe
  * @argv: it is an argument vector in the programe
+ *
+ * Return: always 0
  */
 int main(int argc __attribute__((unused)), char *argv[])
 {
