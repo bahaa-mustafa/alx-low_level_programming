@@ -1,5 +1,6 @@
-#include "main.h"
+#include<stdio.h>
 #include<unistd.h>
+#include "main.h"
 
 /**
  * _putchar - return a char
