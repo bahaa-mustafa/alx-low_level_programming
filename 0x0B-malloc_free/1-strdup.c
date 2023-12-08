@@ -1,5 +1,6 @@
 #include "main.h"
 #include <string.h>
+#include <limits.h>
 
 /**
  * _strdup - returns a pointer to a newly
