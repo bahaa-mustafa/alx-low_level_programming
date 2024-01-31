@@ -4,7 +4,8 @@
  * _strlen - culculate length of string if found
  * @s: pointer to string length
  *
- * Return: number of chars or 0
+ * Description: calculate length of linked list
+ * Return: number of chars or 0 in fail
  */
 
 int _strlen(char *s)
@@ -19,9 +20,10 @@ int _strlen(char *s)
 }
 
 /**
- * pront_list - function that print list of string
+ * print_list - function that print list of string
  * @h: the list will print
  *
+ * Description: print linked list if if found or nil
  * Return: number of chars and the word
  */
 
@@ -31,7 +33,8 @@ size_t print_list(const list_t *h)
 
 	while (h)
 	{
-		printf("[%d] %s\n", _strlen(h->str), h->str ? h->str : "(nil)");
+		printf("[%d] %s\n", _strlen(h->str),
+				h->str ? h->str : "(nil)");
 		h = h->next;
 		i++;
 	}
