@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * size_t - calculate number of chars
+ * list_len - calculate number of chars
  * @h: pointer to chars
  *
  * Return: number of chars
