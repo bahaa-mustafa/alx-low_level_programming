@@ -18,6 +18,4 @@ void print_dog(struct dog *d)
 	}
 	else if (!d && !d->name)
 		printf("Name: (nil)\n");
-	else
-		printf("");
 }
