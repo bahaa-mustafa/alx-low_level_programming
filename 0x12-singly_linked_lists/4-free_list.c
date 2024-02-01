@@ -24,5 +24,6 @@ void free_list(list_t *head)
 			node = next_node;
 		}
 	}
-	return;
+	else
+		return;
 }
