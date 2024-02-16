@@ -1,4 +1,4 @@
-#include"hash_table.h"
+#include"hash_tables.h"
 #include <stdio.h>
 
 /**
@@ -8,19 +8,19 @@
  *
  * Return: pointer to new node
  */
-hash_table_t *make_hash_node(const char *key, const char *value)
+hash_node_t *make_hash_node(const char *key, const char *value)
 {
 	hash_node_t *node = malloc(sizeof(hash_node_t));
 
 	if (!node)
 		return (NULL);
-	node->key = key;
+	node->key = strdup(key);
 	if (!node->key)
 	{
 		free(node);
 		return (NULL);
 	}
-	node->value = value;
+	node->value = strdup(value);
 	if (!node->value)
 	{
 		free(node);
@@ -42,18 +42,18 @@ hash_table_t *make_hash_node(const char *key, const char *value)
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_table_t *new_node, *temp;
+	hash_node_t *new_node, *temp;
 	char *new_value;
 	unsigned long int index;
 
-	if (value == NULL || key == NULL || strlen(key) == NULL ||
-			ht == NULL || ht->size == NULL || ht->array == NULL)
+	if (value == NULL || key == NULL || strlen(key) == 0 ||
+			ht == NULL || ht->size == 0 || ht->array == NULL)
 		return (0);
 	index = key_index((const unsigned char *)key, ht->size);
 	temp = ht->array[index];
 	while (temp)
 	{
-		if (strckp(temp->key, key) == 0)
+		if (strcmp(temp->key, key) == 0)
 		{
 			new_value = strdup(value);
 			if (!new_value)
