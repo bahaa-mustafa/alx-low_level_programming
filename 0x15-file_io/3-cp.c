@@ -17,23 +17,24 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: %s cp file_from file_to\n", argv[0]);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		return (97);
 	}
 	file_from = open(argv[1], O_RDONLY);
 	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-
-	if (file_from == -1 || file_to == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't open files\n");
-		return (98);
-	}
+/**
+*	if (file_from == -1)
+*	{
+*		dprintf(STDERR_FILENO, "Error: Can't open files\n");
+*		return (98);
+*	}
+*/
 	while ((char_read = read(file_from, buffer, BUFFER_SIZE)) > 0)
 	{
 		char_write = write(file_to, buffer, char_read);
 		if (char_write == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			return (99);
 		}
 	}
@@ -44,5 +45,10 @@ int main(int argc, char *argv[])
 	}
 	close(file_to);
 	close(file_from);
+	if (close(file_from == -1 || close(file_to) == -1))
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd \n");
+		return (100);
+	}
 	return (0);
 }
