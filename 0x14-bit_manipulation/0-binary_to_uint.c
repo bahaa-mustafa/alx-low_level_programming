@@ -3,15 +3,14 @@
 /**
  * binaryToDecimal - convert binary number to decimal number
  * @n: binary number
- * 
+ *
  * Return: decimal number
 */
-int binaryToDecimal(int n)
+unsigned int binaryToDecimal(unsigned int n)
 {
-    int binary_number = n, decimal_namber = 0, last_digit, temp;
-    int base = 1;
+    unsigned int binary_number = n, decimal_namber = 0, last_digit, temp;
+    unsigned int base = 1;
 
-    
     temp = binary_number;
     while (1)
     {
@@ -28,14 +27,14 @@ int binaryToDecimal(int n)
 }
 
 /**
- * binary_to_unit - convert binart to unit decimal
+ * binary_to_uint - convert binart to unit decimal
  * @b: pointer to binary string
- * 
+ *
  * Return: decimal number or 0 in fail
 */
 unsigned int binary_to_uint(const char *b)
 {
-    int i;
+    unsigned int i;
 
     if (b == NULL)
     {
