@@ -9,9 +9,9 @@
 int binaryToDecimal(int n)
 {
     int binary_number = n, decimal_namber = 0, last_digit, temp;
-
-    // base namber is 2^0 = 1
     int base = 1;
+
+    
     temp = binary_number;
     while (1)
     {
