@@ -6,22 +6,18 @@
  *
  * Return: decimal number
 */
-unsigned int binaryToDecimal(unsigned int n)
+int binaryToDecimal(int n)
 {
-    unsigned int binary_number = n, decimal_namber = 0, last_digit, temp;
-    unsigned int base = 1;
+    int binary_number = n, decimal_namber = 0, last_digit, temp;
+    int base = 1;
 
     temp = binary_number;
-    while (1)
+    while (temp)
     {
         last_digit = temp % 10;
         temp = temp / 10;
         decimal_namber += last_digit * base;
         base *= 2;
-        if (temp == 0)
-        {
-            break;
-        }
     }
     return (decimal_namber);
 }
@@ -34,7 +30,7 @@ unsigned int binaryToDecimal(unsigned int n)
 */
 unsigned int binary_to_uint(const char *b)
 {
-    unsigned int i;
+    int i;
 
     if (b == NULL)
     {
